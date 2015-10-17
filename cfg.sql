@@ -1,0 +1,10 @@
+USE `cfg`;
+
+CREATE TABLE `submissions` (
+	`id` INTEGER(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`email` VARCHAR(255) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`zip` CHAR(5) NOT NULL,
+	`caption` TEXT,
+	PRIMARY KEY (`id`)
+);

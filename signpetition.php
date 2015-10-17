@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
@@ -259,21 +259,20 @@ html, body {
 <a href="#" class="email" style="display: inline-block">Volunteer For Us</a>
 <a href="#" class="email" style="display: inline-block">Contact Your Legislator</a>
     </div>
-	<form class="petition" method="post" action="signpetition.php">
+	<div class="petition">
 	<h2>Sign this petition now</h2>
-	<label for="email">Email</label>
-	<input type="text" id="email" name="email" />
-	<label for="name">Name</label>
-	<input type="text" id="name" name="name" />
-	<label for="zip">ZIP code</label>
-	<input type="text" id="zip" name="zip" />
-	<label for="attachment">Photo Message</label>
-	<input type="file" id="attachment" name="attachment" />
-	<label for="caption">Caption</label>
-	<textarea id="caption"></textarea>
-	<input type="checkbox" id="agree" name="agree" style="vertical-align: middle" /><label for="agree" style="vertical-align: middle">I affirm</label>
-	<input type="submit" value="Sign" style="" />
-	</form>
+	<span>Thank you for signing.</span>
+<?php
+$conn = new mysqli('localhost', 'root', '', 'cfg');
+if (!$conn->connect_error) {
+	if ($ps = $conn->prepare('INSERT INTO `submissions` (`email`,`name`,`zip`,`caption`) VALUES (?,?,?,?)')) {
+		$ps->bind_param('ssss', $_POST['email'], $_POST['name'], $_POST['zip'], $_POST['caption']);
+		$ps->execute();
+	}
+}
+$conn->close();
+?>
+	</div>
 	<div class="petition">
 	<h2>Other signers</h2>
 <?php
