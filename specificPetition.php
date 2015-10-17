@@ -163,7 +163,7 @@ html, body {
 		.attention {
 			transform: none;
 			left: 0;
-			top: 0;
+			bottom: 0;
 		}
     </style>
 </head>
@@ -222,10 +222,21 @@ html, body {
     </p>
 <a href="#" class="email" style="display: inline-block">Share</a>
 <a href="#" class="email" style="display: inline-block">Donate</a>
-<a href="#" class="email" style="display: inline-block">Volunteer</a>
+<a href="#" class="email" style="display: inline-block">Volunteer For Us</a>
 <a href="#" class="email" style="display: inline-block">Contact Your Legislator</a>
     </div>
-    <div style="width: 600px; display: inline-block; vertical-align: top; padding-left: 120px">
+	<form style="width: 480px; margin: 0 auto">
+	<h2>Sign this petition</h2>
+	<label for="email">Email</label>
+	<input type="text" id="email" name="email" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<label for="name">Name</label>
+	<input type="text" id="name" name="name" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<label for="zip">ZIP code</label>
+	<input type="text" id="zip" name="zip" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<input type="checkbox" id="agree" name="agree" style="vertical-align: middle" /><label for="agree" style="vertical-align: middle">I affirm</label>
+	<input type="submit" value="Sign" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	</form>
+    <!--<div style="width: 600px; display: inline-block; vertical-align: top; padding-left: 120px">
         <p style="font-size:22px">
             <b>Recommended Petitions </b>
 
@@ -236,7 +247,7 @@ html, body {
                 </tr>
                 </table>
 
-    </div>
+    </div>-->
 </div>
 </body>
 </html>

@@ -174,7 +174,7 @@ $(document).ready(function() {
 
 <h1 class="attention">Shut down Indian Point</h1>
 
-<form class="actions" action="email.html">
+<form class="actions" action="sendemail.php" method="post">
 <input type="text" class="email" name="email" placeholder="Your email address..." />
 <input type="submit" class="submit" />
 <p class="alternate">Or text INDIANPOINT to 40310</p>

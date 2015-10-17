@@ -138,6 +138,8 @@ html, body {
 
 	background: rgba(127, 127, 127, 0.5);
 	padding: 10px;
+
+	overflow: hidden;
 }
 
 .hehelped {
@@ -145,18 +147,43 @@ html, body {
 	margin: 5px 0;
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script>
+var names = [ 'Kevin', 'Allen', 'Mark', 'Greg', 'Tom', 'David', 'Helen', 'Pat', 'Ann', 'Adam', 'Bonnie', 'Brittany', 'Courtney', 'Erin', 'Aaron', 'Bethany' ];
+var states = [ 'New York', 'New Jersey', 'Georgia', 'Tennessee', 'Michigan', 'Colorado', 'Pennsylvania', 'Connecticut', 'Maine', 'New Hampshire' ];
+
+$(document).ready(function() {
+	$('.pathos').height($('.pathos').height());
+	$('.pathos').width($('.pathos').width());
+	$('.hehelped').each(function() {
+		$(this).css('top', $(this).position().top);
+	});
+	$('.hehelped').css('position', 'absolute').css('left', $('.pathos').css('padding-left'));
+	setInterval(function() {
+		$('.old').remove();
+		$('.slide').css('position', '').css('transition', '').css('transform', '').css('left', '');
+		$('.slide').addClass('old');
+		$('.slide').after($('<p class="hehelped slide" style="position: absolute; left: ' + $('.pathos').outerWidth() + 'px; width: ' + $('.pathos').width() * 2 + '; top: ' + $('.pathos').css('padding-top') + '">' + names[parseInt(Math.random() * names.length)] + ' from ' + states[parseInt(Math.random() * states.length)] + ' helped. What about you?</p>'));
+		$('.slide').css('transition', 'transform 2s').css('transform', 'translate(-' + ($('.pathos').outerWidth() - parseInt($('.pathos').css('padding-left'))) + 'px, 0)');
+	}, 5000);
+});
+</script>
 </head>
 <body>
 <div class="blurred">
 
 <h1 class="attention">Shut down Indian Point</h1>
 
-<form class="actions">
-<a href="http://198.98.51.41/cfg/specificPetition.php" class="email">Learn more and take action</a>
+<form class="actions" action="email.html">
 </form>
 
 <div class="pathos">
-<p class="hehelped">You signed up last night to receive more info about this campaign at the Beats Antique concert.</p>
+<p class="hehelped">Email sent.</p>
+<?php
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+mail($_POST['email'], "Rock the Earth", file_get_contents('email.html'), $headers);
+?>
 </div>
 
 </div>
