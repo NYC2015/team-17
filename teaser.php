@@ -191,7 +191,7 @@ $(document).ready(function() {
 </head>
 <body>
 
-<video autoplay loop poster="http://www.nationofchange.org/2015/wp-content/uploads/IndianPoint051315.jpg" id="bgvid">
+<video autoplay loop muted poster="http://www.nationofchange.org/2015/wp-content/uploads/IndianPoint051315.jpg" id="bgvid">
     <source src="scare.mp4" type="video/mp4">
 </video>
 

@@ -171,7 +171,8 @@ html, body {
 			margin: 0 auto;
 		}
 
-		.petition input[type="text"], .petition input[type="submit"] {
+		.petition input[type="text"], .petition input[type="submit"], .petition input[type="file"], textarea {
+			display: block;
 			width: 100%;
 			border: none;
 			border-radius: 10px;
@@ -181,13 +182,7 @@ html, body {
 			background-color: rgba(255, 255, 255, 0.8);
 		}
 
-		.petition input[type="text"]:hover, .petition input[type="submit"]:hover {
-			width: 100%;
-			border: none;
-			border-radius: 10px;
-			padding: 10px;
-			box-sizing: border-box;
-			margin: 5px 0;
+		.petition input[type="text"]:hover, .petition input[type="submit"]:hover, .petition input[type="file"]:hover, textarea:hover {
 			background-color: rgba(255, 255, 255, 1);
 		}
 
@@ -265,28 +260,24 @@ html, body {
 <a href="#" class="email" style="display: inline-block">Contact Your Legislator</a>
     </div>
 	<form class="petition">
-	<h2>Sign this petition</h2>
+	<h2>Sign this petition now</h2>
 	<label for="email">Email</label>
 	<input type="text" id="email" name="email" />
 	<label for="name">Name</label>
 	<input type="text" id="name" name="name" />
 	<label for="zip">ZIP code</label>
 	<input type="text" id="zip" name="zip" />
+	<label for="attachment">Photo Message</label>
+	<input type="file" id="attachment" name="attachment" />
+	<label for="caption">Caption</label>
+	<textarea id="caption"></textarea>
 	<input type="checkbox" id="agree" name="agree" style="vertical-align: middle" /><label for="agree" style="vertical-align: middle">I affirm</label>
 	<input type="submit" value="Sign" style="" />
 	</form>
-    <!--<div style="width: 600px; display: inline-block; vertical-align: top; padding-left: 120px">
-        <p style="font-size:22px">
-            <b>Recommended Petitions </b>
-
-        </p>
-        <table>
-            <tr>
-
-                </tr>
-                </table>
-
-    </div>-->
+	<div class="petition">
+	<h2>Other signers</h2>
+	<span>None...</span>
+	</div>
 </div>
 </body>
 </html>
