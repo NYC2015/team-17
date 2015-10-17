@@ -165,6 +165,45 @@ html, body {
 			left: 0;
 			bottom: 0;
 		}
+
+		.petition {
+			width: 480px;
+			margin: 0 auto;
+		}
+
+		.petition input[type="text"], .petition input[type="submit"] {
+			width: 100%;
+			border: none;
+			border-radius: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+			margin: 5px 0;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.petition input[type="text"]:hover, .petition input[type="submit"]:hover {
+			width: 100%;
+			border: none;
+			border-radius: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+			margin: 5px 0;
+			background-color: rgba(255, 255, 255, 1);
+		}
+
+		.petition input[type="submit"] {
+			background: rgba(50, 205, 50, 0.8);
+			color: #fff;
+		}
+
+		.petition input[type="submit"]:hover {
+			background: rgba(50, 205, 50, 1);
+			color: #fff;
+		}
+
+		.blurred2 {
+			padding-bottom: 100px;
+		}
     </style>
 </head>
 <body>
@@ -225,16 +264,16 @@ html, body {
 <a href="#" class="email" style="display: inline-block">Volunteer For Us</a>
 <a href="#" class="email" style="display: inline-block">Contact Your Legislator</a>
     </div>
-	<form style="width: 480px; margin: 0 auto">
+	<form class="petition">
 	<h2>Sign this petition</h2>
 	<label for="email">Email</label>
-	<input type="text" id="email" name="email" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<input type="text" id="email" name="email" />
 	<label for="name">Name</label>
-	<input type="text" id="name" name="name" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<input type="text" id="name" name="name" />
 	<label for="zip">ZIP code</label>
-	<input type="text" id="zip" name="zip" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<input type="text" id="zip" name="zip" />
 	<input type="checkbox" id="agree" name="agree" style="vertical-align: middle" /><label for="agree" style="vertical-align: middle">I affirm</label>
-	<input type="submit" value="Sign" style="width: 100%; border: none; border-radius: 10px; padding: 10px; box-sizing: border-box; margin: 5px 0" />
+	<input type="submit" value="Sign" style="" />
 	</form>
     <!--<div style="width: 600px; display: inline-block; vertical-align: top; padding-left: 120px">
         <p style="font-size:22px">

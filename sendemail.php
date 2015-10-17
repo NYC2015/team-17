@@ -147,6 +147,26 @@ html, body {
 	margin: 5px 0;
 }
 </style>
+<style>
+body, html {
+	background: none;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(http://www.nationofchange.org/2015/wp-content/uploads/IndianPoint051315.jpg) no-repeat;
+    background-size: cover; 
+}
+</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 <script>
 var names = [ 'Kevin', 'Allen', 'Mark', 'Greg', 'Tom', 'David', 'Helen', 'Pat', 'Ann', 'Adam', 'Bonnie', 'Brittany', 'Courtney', 'Erin', 'Aaron', 'Bethany' ];
@@ -170,11 +190,17 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
+
+<video autoplay loop poster="http://www.nationofchange.org/2015/wp-content/uploads/IndianPoint051315.jpg" id="bgvid">
+    <source src="scare.mp4" type="video/mp4">
+</video>
+
 <div class="blurred">
 
 <h1 class="attention">Shut down Indian Point</h1>
 
-<form class="actions" action="email.html">
+<form class="actions">
+<a href="teaser.php" class="email">Go back</a>
 </form>
 
 <div class="pathos">
