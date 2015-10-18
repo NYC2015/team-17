@@ -202,7 +202,7 @@ $(document).ready(function() {
 <form class="actions" action="sendemail.php" method="post">
 <input type="text" class="email" name="email" placeholder="Your email address..." />
 <input type="submit" class="submit" />
-<p class="alternate">Or text INDIANPOINT to 40310</p>
+<p class="alternate">Or text INDIANPOINT to 55555</p>
 </form>
 
 <div class="pathos">

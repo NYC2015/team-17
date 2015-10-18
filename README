@@ -1,0 +1,21 @@
+This is team 17's submission to the 2015 NYC JPMorgan Chase & Co. Code for Good contest, in support of the non-profit organization Rock the Earth, that won 2nd place for best technology.
+
+Summary
+=======
+The issue that Rock the Earth faced was the use of paper petitions during music concerts. The problem with a written signatures is that info can easily be misread and is a waste of paper. Our solution was to create a web app that appealed to the general public and was simple enough for a concert goer's attention span. Our goal was to create a dynamic campaign web app that allowed campaign mangers to create and edit campaign pages.
+
+The teaser page is designed to attract as much as attention as possible from concert-goers while also being as simple as possible. Time-sensitive concert-goers only see one field that they need to fill out, as well as a headline and full screen shock image but no description. The app would thereby send an email to the user that contains a link to a page where they can learn more, input the remaining necessary info, and take action after they returned from the concert. We also demonstrated a stub feature where users could text the campaign name to a SMS short code and be contacted through the number they sent the SMS from, in case a passerby wants to hear more but is put off by the long line in front of the device where other interested people are entering email addresses.
+
+We intended to use PhoneGap in order to create an offline app for iPads in areas of spotty or overloaded cellular service (concerts, mountains). The app would then sync with the website when the petition organizer returned to an area with internet access, sending emails to all subscribers. The SMS alternative for passerbys is also intended to address this concern, since SMS messages are queued by nearly all modern phones and so the subscription request will eventually be sent when the user returns to an area of good service.
+
+If we had more time, we would have also created a login system for petition organizers. The portal would allow administrators to download ZIP codes, dates, names, and comments of signers to input into an analytic tool. It would also allow organizers to create petitions, edit petition text, or delete any profane comments or photos attached to a signature. We also would've implemented a frontpage for petition signers as well as more of a platform, where the site would perform simple analytics to recommend signers to similar petitions they might be interested in. The current site, although it intends to store multiple active campaigns in the database at once, requires direct links to the petition info pages that are only known when the user requests more info.
+
+The reason why we didn't implement a full-fledged social network like some of our competitors is because we don't foresee concert-goers being interested in downloading an app where all they can do is view social impact campaigns. Traditional social networks such as Facebook and Twitter are much better at spreading the word and that's why we implemented the Share button as we did. Other ways the user could take action include donating to the cause; volunteering in efforts involving any technical hard skills (for those with backgtrounds in law, engineering, or art); or calling their local lawmakers and representatives who have power over the subject in question.
+
+Technologies used
+=================
+HTML5 background videos
+jQuery
+PHP
+mail()
+MySQL
